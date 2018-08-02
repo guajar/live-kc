@@ -6,7 +6,12 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' }
+  { path: 'tasks', loadChildren: './tasks/tasks.module#TasksModule' },
+  { path: 'contacts', loadChildren: './contacts/contacts.module#ContactsModule' },
+  { path: 'books', loadChildren: './books/books.module#BooksModule' },
+
+  { path: '', pathMatch: 'full', redirectTo: 'home' }, /* Cuando no tiene valor en la ruta */
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }  /* Para cualquier otro caso */
 ];
 
 @NgModule({
