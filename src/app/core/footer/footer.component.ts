@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.autor = 'Jose Maldonado';
+    this.autor = 'Jose Antonio Maldonado';
     this.empresa = 'JamalCo';
   }
 

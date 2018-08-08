@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Hello Mate!!</h4>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="userName">Name</label>
+      <input type="text" [(ngModel)]="user"
+        class="form-control" name="userName" id="userName" placeholder="Name">
+    </div>
+    <p class="card-text">Text</p>
+    <button (click)="remove($event)">Remove</button>
+  </div>
+  <div class="card-footer text-muted">
+    {{ language === 'es' ? 'Hola' : 'Hello' }}
+    {{ user.toUpperCase() }}, eres el number {{ 2 - 1}}
+  </div>
+</div>
